@@ -68,10 +68,12 @@ input[type='text'] {
 }
 
 .button-fonction {
+    display: flex;
     border-radius: 20px;
-    padding: 28px;
+    padding: 28px 0 28px 33.5px;
     font-size: 16px;
     font-weight: 500;
+    gap: 17px;
     border: none;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -121,7 +123,6 @@ footer{
 }
 footer img {
     width: 138px;
-    fill: white !important;
 }
 .partenaire {
     display: flex;
