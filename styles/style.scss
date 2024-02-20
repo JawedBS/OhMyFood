@@ -1,0 +1,218 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+    @media screen and (min-width: 376px) {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: #F6F6F6;
+    }
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    & img {
+    width: 194px;
+    height: 36px;
+    padding: 0px 19px 0px 16px;
+    margin: 14px 0px 13px 0px;
+    }
+  
+}
+.localisation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;
+    gap: 17px;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+input[type='text'] {
+    border: none;
+    background-color: #EAEAEA;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #F6F6F6;
+    & p {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+    }
+}
+.button-explore {
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    padding: 13px 18.75px 13px 18.75px;
+    margin-top: 27px;
+    margin-bottom: 57px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 17px;
+    @media screen and (min-width: 376px) {
+        padding: 50px 180px 50px 180px;
+        background-color: #FFFFFF;
+        & .fonction {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        & .button-fonction {
+            width: 30%;
+        }
+    }
+}
+.fonction {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.button-fonction {
+    display: flex;
+    border-radius: 20px;
+    padding: 28px 0 28px 33.5px;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 17px;
+    border: none;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+    background-color: #F6F6F6;
+    & a {
+        text-decoration: none;
+    }
+    @media screen and (min-width:376px) {
+        padding: 0px 180px 0px 180px;
+        gap: 28px;
+    }
+}
+ 
+.cards {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width:376px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+        & a {
+            width: 45%;
+        }
+    }
+    & .card {
+    border-radius: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    box-sizing: border-box;
+    margin-bottom: 18px;
+
+    &-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    & img {
+        width: 100%;
+        height: 174px;
+        border-radius: 15px 15px 0px 0px;
+        
+    }
+    &-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        margin-top: 11px;
+        margin-bottom: 5px;
+        margin-left: 12px;
+        color: #353535;
+    }
+    &-subtitle {
+        font-size: 17px;
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: 14px;
+        margin-left: 12px;
+        color: #353535;
+    }
+    & i {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+}
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    background-color: #353535;
+    color: white;
+    padding: 22px 25px 22px 22px;
+    & img {
+    width: 110px;
+    height: 18px;
+}
+    & p {
+        margin: 0;
+    }
+    & nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 7px;
+        font-weight: 400;
+    }
+    @media screen and (min-width:376px) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 16px;
+        padding: 30px 25px 30px 25px;
+        & nav {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 54px;
+        }
+    }
+}
+.partenaire {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    font-weight: 500;
+}
+.proposition {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    font-weight: 500;
+}
+

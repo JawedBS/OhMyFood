@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px 22px 22px;
+}
+footer img {
+  width: 110px;
+  height: 18px;
+}
+footer p {
+  margin: 0;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
+  font-weight: 400;
+}
+
+.partenaire {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  font-weight: 500;
+}
+
+.proposition {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  font-weight: 500;
+}/*# sourceMappingURL=Restaurant.css.map */
