@@ -91,7 +91,8 @@ input[type=text] {
     justify-content: space-between;
   }
   .fonctionnement .button-fonction {
-    width: 30%;
+    width: 100%;
+    padding-right: 38px;
   }
 }
 
@@ -101,6 +102,23 @@ input[type=text] {
   gap: 25px;
 }
 
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 24px;
+  width: 24px;
+  color: #F6F6F6;
+  background-color: #9356DC;
+}
+
 .button-fonction {
   display: flex;
   border-radius: 20px;
@@ -108,8 +126,16 @@ input[type=text] {
   font-size: 16px;
   font-weight: 500;
   gap: 17px;
+  width: 90%;
   border: none;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.button-fonction i {
+  border: none;
+  background-color: #FFFFFF;
+  height: auto;
+  width: auto;
+  color: #353535;
 }
 
 .restaurant {
@@ -154,6 +180,7 @@ input[type=text] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .cards .card img {
   width: 100%;
@@ -181,6 +208,8 @@ input[type=text] {
   display: flex;
   align-items: center;
   margin-right: 15px;
+  height: 21px;
+  width: 22px;
 }
 
 footer {
