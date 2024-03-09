@@ -13,6 +13,7 @@ header {
     height: 36px;
     padding: 0px 19px 0px 16px;
     }
+    
     & i {
         height: 30px;
         width: 30px;
@@ -20,6 +21,7 @@ header {
 }
 main {
     margin: 0;
+    margin-bottom: -30px;
     & img {
         width: 100%;
     }
@@ -36,7 +38,10 @@ main {
    position: relative;
    top: -30px;
     z-index: 10;
-    height: calc(100% + 30px)
+    height: calc(100% + 30px);
+    @media screen and (min-width: 376px) {
+        margin: 0px 192px 0px 192px
+    }
 }
 
 
@@ -46,16 +51,39 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
- 
-}
+    @media screen and (min-width: 376px) {
+        justify-content: center;
+        gap: 24px;
+    }
+    &-title {
+        font-weight: 400;
+        font-size: 28px;
+        font-family: "Shrikhand" , serif;
+    }
+  & i {
+    display: flex;
+    width: 22px;
+    height: 21px;
+    align-items: center;
+    justify-content: center;
+  }
+  }
+
 .Entry {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    
 }
 .section-title{
     margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    @media screen and (min-width: 376px) {
+        justify-content: center;
+        margin: 0 211px 0px 210px;
+     }
 }
 .section-title::after {
     display: block;
@@ -65,27 +93,49 @@ main {
     background-color: #99E2D0;
 }
 .card {
+    display: flex;
+    flex-direction: row;
     border-radius: 15px;
     background: #FFFFFF;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
     box-sizing: border-box;
     margin-bottom: 18px;
-    padding: 15px;
-
+    overflow: hidden;
+    
+    @media screen and (min-width: 376px) {
+        margin: 0 211px 0px 210px;
+     }
     &-content {
         display: flex;
         flex-direction: row;
         gap: 5px;
-        align-items: flex-end;
+        width: 100%;
+        &:hover + .card-select {
+            transform: translate(-59px, 0px);
+        }
         &-price {
             margin: 0;
             font-weight: 700;
             font-size: 15px;
+            display: flex;
+            align-items: flex-end;
+            padding: 15px;
+            transition: transform 330ms ease-in-out;
+            &:hover {
+                transform: translate(-59px, 0px);
+            }
         }
     }
+       
+        
+
     &-txt {
         align-self: stretch;
         width: 100%;
+        padding: 15px;
+        &:hover + .card-content-price {
+            transform: translate(-59px, 0px);
+        }
     }
     &-title {
         font-size: 18px;
@@ -98,6 +148,15 @@ main {
         font-weight: 300;
         margin: 0;
         color: #353535;
+    }
+    &-select {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #99E2D0;
+        width: 59px;
+        margin-right: -59px;
+        transition: transform 330ms ease-in-out;
     }
 }
 
@@ -135,6 +194,19 @@ footer{
         justify-content: space-between;
         gap: 7px;
         font-weight: 400;
+    }
+    @media screen and (min-width:376px) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 16px;
+        padding: 30px 25px 30px 25px;
+        & nav {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 54px;
+        }
     }
 }
 .partenaire {

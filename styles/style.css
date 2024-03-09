@@ -88,7 +88,7 @@ input[type=text] {
   }
   .fonctionnement .fonction {
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
   }
   .fonctionnement .button-fonction {
     width: 100%;
@@ -118,6 +118,11 @@ input[type=text] {
   color: #F6F6F6;
   background-color: #9356DC;
   font-size: 14px;
+}
+@media screen and (min-width: 376px) {
+  .btn {
+    width: 100%;
+  }
 }
 
 .button-fonction {

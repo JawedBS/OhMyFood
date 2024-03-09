@@ -5,6 +5,7 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Oh My Food</title>
+    <link rel="stylesheet" href="../styles/restaurant.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
@@ -15,23 +16,28 @@
 
 <body>
     <header>
-        <i></i>
-        <img src="./Assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood avec fond blanc">
+        <div>
+        <i class="fa-solid fa-arrow-left"></i>
+        <img src="../Assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood avec fond blanc">
+        </div>
+        <img src="../Assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
     </header>
     <main>
-        <div>
+        
+        <div class="main-content">
+        <div class="palette">
             <h1>Le délice des sens</h1>
-            <i></i>
+            <i class="fa-regular fa-heart"></i>
         </div>
-        <section>
-            <h2>Entrées</h2>
+        <section class="Entry">
+            <h2 class="section-title">Entrées</h2>
             <article class="card">
                 <div class="card-content">
                     <div class="card-txt">
                         <h3 class="card-title">Tartare de thon</h3>
                         <p class="card-subtitle">Assaisonné au yuzu</p>
                     </div>
-                    <p>25€</p>
+                    <p class="card-content-price">25€</p>
                 </div>
             </article>
             <article class="card">
@@ -40,7 +46,7 @@
                         <h3 class="card-title">Bouchée de homard croustillant</h3>
                         <p class="card-subtitle">Et sa farandole de petits légumes</p>
                     </div>
-                    <p>35€</p>
+                    <p class="card-content-price">35€</p>
                 </div>
             </article>
             <article class="card">
@@ -49,19 +55,19 @@
                         <h3 class="card-title">Velouté de cèpes</h3>
                         <p class="card-subtitle">Aux truffes</p>
                     </div>
-                    <p>20€</p>
+                    <p class="card-content-price">20€</p>
                 </div>
             </article>
         </section>
-        <section>
-            <h2>Plats</h2>
+        <section class="Entry">
+            <h2 class="section-title">Plats</h2>
             <article class="card">
                 <div class="card-content">
                     <div class="card-txt">
                         <h3 class="card-title">Poulet rôti aux herbes de Provence </h3>
                         <p class="card-subtitle">Et sa crème de truffe</p>
                     </div>
-                    <p>40€</p>
+                    <p class="card-content-price">40€</p>
                 </div>
             </article>
             <article class="card">
@@ -70,7 +76,7 @@
                         <h3 class="card-title">Langouste rôtie </h3>
                         <p class="card-subtitle">Et ses légumes de saison</p>
                     </div>
-                    <p>35€</p>
+                    <p class="card-content-price">35€</p>
                 </div>
             </article>
             <article class="card">
@@ -79,19 +85,19 @@
                         <h3 class="card-title">Côte de bœuf Angus</h3>
                         <p class="card-subtitle">Et sa purée de panais</p>
                     </div>
-                    <p>44€</p>
+                    <p class="card-content-price">44€</p>
                 </div>
             </article>
         </section>
-        <section>
-            <h2>Desserts</h2>
+        <section class="Entry">
+            <h2 class="section-title">Desserts</h2>
             <article class="card">
                 <div class="card-content">
                     <div class="card-txt">
                         <h3 class="card-title">Farandole de desserts</h3>
                         <p class="card-subtitle">Du chef</p>
                     </div>
-                    <p>18€</p>
+                    <p class="card-content-price">18€</p>
                 </div>
             </article>
             <article class="card">
@@ -100,7 +106,7 @@
                         <h3 class="card-title">Crème brulée</h3>
                         <p class="card-subtitle">Revisité</p>
                     </div>
-                    <p>22€</p>
+                    <p class="card-content-price">22€</p>
                 </div>
             </article>
             <article class="card">
@@ -109,21 +115,22 @@
                         <h3 class="card-title">Tiramisu</h3>
                         <p class="card-subtitle">À la noisette</p>
                     </div>
-                    <p>€</p>
+                    <p class="card-content-price">23€</p>
                 </div>
             </article>
         </section>
-        <button></button>
+        <button>Commander</button>
+    </div>
     </main>
     <footer>
-        <img src="./Assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood avec fond noir">
+        <img src="../Assets/images/logo/ohmyfood@2x-white.svg" alt="Logo OhMyFood avec fond noir">
         <nav>
-            <div>
-                <i></i>
+            <div class="proposition">
+                <i class="fa-solid fa-utensils"></i>
                 <p>Proposer un restaurant</p>
             </div>
-            <div>
-                <i></i>
+            <div class="partenaire">
+                <i class="fa-solid fa-handshake-angle" ></i>
                 <p>Devenir partenaire</p>
             </div>
             <p>Mentions légales</p>
