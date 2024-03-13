@@ -16,6 +16,8 @@
 </head>
 
 <body>
+    <div class="box-loader"><span class="loader"></span></div>
+    <div class="main-content">
     <header>
         <img src="./Assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood avec fond blanc">
         <div class="localisation">
@@ -30,27 +32,27 @@
         <section class="explore">
             <h1 class="section-title">Réserver le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="button-explore">Explorez nos restaurants</button>
+            <a href="#restaurant"><button class="button-explore">Explorez nos restaurants</button></a>
         </section>
         <section class="fonctionnement">
             <h2>Fonctionnement</h2>
             <div class="fonction">
                 <div class="btn">
-                    <i class="fa-regular fa-1"></i>
+                    <i class="fa-regular fa-1 icon"></i>
                     <button class="button-fonction"><i class="fa-solid fa-mobile-screen-button"></i><span>Choississez un restaurant</span></button>
                 </div>
                 <div class="btn">
-                    <i class="fa-regular fa-2"></i>
+                    <i class="fa-regular fa-2 icon"></i>
                     <button class="button-fonction"><i class="fa-solid fa-list-ul"></i><span>Composez votre menu</span></button>
                 </div>
                 <div class="btn">
-                    <i class="fa-regular fa-3"></i>
+                    <i class="fa-regular fa-3 icon"></i>
                     <button class="button-fonction"><i class="fa-solid fa-store"></i><span>Dégustez au restaurant</span></button>
                 </div>
             </div>
         </section>
         <section class="restaurant">
-            <h2>Restaurants</h2>
+            <h2 id="restaurant">Restaurants</h2>
             <div class="cards">
             <a href="./restaurant/palette.html">
                 <article class="card" >
@@ -118,10 +120,10 @@
                 <p>Devenir partenaire</p>
             </div>
             <p>Mentions légales</p>
-            <p>Contact</p>
+            <a href="mailto:OHMYFOOD@MAIL.COM"><p>Contact</p></a>
         </nav>  
     </footer>
-
+    </div>
 </body>
 
 

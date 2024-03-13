@@ -8,6 +8,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 14px 89px 13px 17px;
+  gap: 42px;
   background-color: #fff;
 }
 header img {
@@ -15,17 +16,50 @@ header img {
   height: 36px;
   padding: 0px 19px 0px 16px;
 }
+header a {
+  text-decoration: none;
+  color: #353535;
+}
 header i {
   height: 30px;
   width: 30px;
 }
+header .fa-solid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1025px) {
+  header {
+    padding: 30px 621px 32px 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 30px 401px 32px 17px;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  header {
+    padding: 30px 241px 32px 17px;
+  }
+}
 
 main {
   margin: 0;
-  margin-bottom: -30px;
+  margin-bottom: -55px;
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 main img {
   width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 426px) {
+  main img {
+    height: 393px;
+  }
 }
 
 .main-content {
@@ -38,55 +72,92 @@ main img {
   border-radius: 30px 30px 0px 0px;
   background-color: #F6F6F6;
   position: relative;
-  top: -30px;
+  top: -55px;
   z-index: 10;
-  height: calc(100% + 30px);
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 1025px) {
   .main-content {
     margin: 0px 192px 0px 192px;
   }
 }
 
-.palette {
+.restaurant {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: 0px 17px 0px 17px;
 }
-@media screen and (min-width: 376px) {
-  .palette {
+@media screen and (min-width: 426px) {
+  .restaurant {
     justify-content: center;
     gap: 24px;
   }
 }
-.palette-title {
+.restaurant-title {
   font-weight: 400;
   font-size: 28px;
   font-family: "Shrikhand", serif;
 }
-.palette i {
+.restaurant i {
   display: flex;
   width: 22px;
   height: 21px;
   align-items: center;
   justify-content: center;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: 0px 24px 0px 0px;
+}
+.restaurant i:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  font-weight: 600;
+  transform: scale(1.2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.Entry {
+.food {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fade-in-food 2s ease-in 0s forwards;
+}
+.food-2 {
+  animation-delay: 500ms;
+}
+.food-3 {
+  animation-delay: 1s;
 }
 
+@keyframes fade-in-food {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .section-title {
   margin: 0;
   font-size: 16px;
   font-weight: 300;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 426px) {
+  .section-title {
+    justify-content: center;
+    margin: 0 156px 0px 155px;
+  }
+}
+@media screen and (min-width: 1025px) {
   .section-title {
     justify-content: center;
     margin: 0 211px 0px 210px;
@@ -108,10 +179,14 @@ main img {
   background: #FFFFFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  margin-bottom: 18px;
   overflow: hidden;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 426px) {
+  .card {
+    margin: 0 156px 0px 155px;
+  }
+}
+@media screen and (min-width: 1025px) {
   .card {
     margin: 0 211px 0px 210px;
   }
@@ -121,9 +196,11 @@ main img {
   flex-direction: row;
   gap: 5px;
   width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .card-content:hover + .card-select {
-  transform: translate(-59px, 0px);
+  margin-right: 0;
 }
 .card-content-price {
   margin: 0;
@@ -132,26 +209,28 @@ main img {
   display: flex;
   align-items: flex-end;
   padding: 15px;
-  transition: transform 330ms ease-in-out;
-}
-.card-content-price:hover {
-  transform: translate(-59px, 0px);
 }
 .card-txt {
   align-self: stretch;
   width: 100%;
   padding: 15px;
-}
-.card-txt:hover + .card-content-price {
-  transform: translate(-59px, 0px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
 }
 .card-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 18px;
   font-weight: 700;
   margin: 0;
   color: #353535;
+  white-space: nowrap;
 }
 .card-subtitle {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 15px;
   font-weight: 300;
   margin: 0;
@@ -164,7 +243,13 @@ main img {
   background-color: #99E2D0;
   width: 59px;
   margin-right: -59px;
-  transition: transform 330ms ease-in-out;
+  transition: all 330ms ease-in-out;
+}
+.card-select i {
+  color: #99E2D0;
+  background: #FFFFFF;
+  scale: 1.2;
+  border-radius: 15px;
 }
 
 button {
@@ -178,6 +263,25 @@ button {
   height: 50px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+button:hover::after {
+  opacity: 1;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 footer {
@@ -203,7 +307,11 @@ footer nav {
   gap: 7px;
   font-weight: 400;
 }
-@media screen and (min-width: 376px) {
+footer nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 426px) {
   footer {
     flex-direction: row-reverse;
     justify-content: flex-start;

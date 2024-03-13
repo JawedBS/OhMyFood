@@ -5,12 +5,71 @@
 body {
   margin: 0;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 426px) {
   body {
     display: flex;
     flex-direction: column;
-    gap: 30px;
     background-color: #F6F6F6;
+  }
+}
+
+.box-loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-out 0s forwards;
+  animation-delay: 3s;
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #9356DC;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 3s linear forwards;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+  }
+}
+.main-content {
+  opacity: 0;
+  animation: fade-in 0s forwards;
+  animation-delay: 3s;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 426px) {
+  .main-content {
+    gap: 30px;
   }
 }
 
@@ -24,8 +83,16 @@ header {
 header img {
   width: 194px;
   height: 36px;
-  padding: 0px 19px 0px 16px;
+  padding: 0px 16px 0px 19px;
   margin: 14px 0px 13px 0px;
+}
+@media screen and (min-width: 426px) {
+  header img {
+    width: 200px;
+    height: 36px;
+    padding: 30px 0px 32px 0px;
+    margin: 0px;
+  }
 }
 
 .localisation {
@@ -37,18 +104,38 @@ header img {
   gap: 17px;
   width: 100%;
   height: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 426px) {
+  .localisation {
+    box-shadow: none;
+  }
+}
+.localisation i {
+  height: 16px;
+  width: 12px;
+}
+.localisation form {
+  margin-right: -70px;
 }
 
 input[type=text] {
   border: none;
   background-color: #EAEAEA;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .section-title {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 0;
+  margin: 39px 0px 0px 0px;
+}
+@media screen and (min-width: 426px) {
+  .section-title {
+    font-size: 40px;
+    margin: 0;
+  }
 }
 
 .explore {
@@ -57,22 +144,51 @@ input[type=text] {
   align-items: center;
   text-align: center;
   background-color: #F6F6F6;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .explore p {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
 }
+@media screen and (min-width: 426px) {
+  .explore {
+    box-shadow: none;
+  }
+  .explore p {
+    margin-top: 18px;
+    font-size: 18px;
+  }
+}
 
 .button-explore {
   border-radius: 25px;
   border: none;
   background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
+  color: #FFFFFF;
   padding: 13px 18.75px 13px 18.75px;
   margin-top: 27px;
   margin-bottom: 57px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.button-explore:hover::after {
+  opacity: 1;
+}
+.button-explore::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 .fonctionnement {
@@ -80,11 +196,11 @@ input[type=text] {
   flex-direction: column;
   gap: 25px;
   padding: 17px;
+  background-color: #FFFFFF;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 1025px) {
   .fonctionnement {
     padding: 50px 180px 50px 180px;
-    background-color: #FFFFFF;
   }
   .fonctionnement .fonction {
     flex-direction: row;
@@ -101,27 +217,47 @@ input[type=text] {
   flex-direction: column;
   gap: 25px;
 }
+@media screen and (min-width: 426px) {
+  .fonction {
+    gap: 0px;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 769px) {
+  .fonction {
+    gap: 25px;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
 .btn {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.btn i {
+@media screen and (min-width: 769px) {
+  .btn {
+    width: 100%;
+  }
+}
+.btn .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: none;
   border-radius: 20px;
   height: 24px;
   width: 24px;
   color: #F6F6F6;
   background-color: #9356DC;
   font-size: 14px;
+  position: relative;
+  left: 10px;
 }
-@media screen and (min-width: 376px) {
-  .btn {
-    width: 100%;
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  .btn .icon {
+    left: 9px;
   }
 }
 
@@ -131,10 +267,25 @@ input[type=text] {
   padding: 28px 0 28px 33.5px;
   font-size: 16px;
   font-weight: 500;
-  gap: 17px;
-  width: 90%;
+  gap: 27px;
+  width: 100%;
   border: none;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.button-fonction:hover i {
+  color: #9356DC;
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .button-fonction {
+    gap: 9px;
+    align-items: center;
+    padding: 28px 30px 28px 33.5px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .button-fonction {
+    gap: 27px;
+  }
 }
 .button-fonction i {
   border: none;
@@ -143,6 +294,8 @@ input[type=text] {
   width: 13px;
   font-size: 20px;
   color: #353535;
+  justify-content: center;
+  align-items: center;
 }
 
 .restaurant {
@@ -154,7 +307,7 @@ input[type=text] {
 .restaurant a {
   text-decoration: none;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 1025px) {
   .restaurant {
     padding: 0px 180px 0px 180px;
     gap: 28px;
@@ -165,7 +318,7 @@ input[type=text] {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 426px) {
   .cards {
     flex-wrap: wrap;
     flex-direction: row;
@@ -206,6 +359,8 @@ input[type=text] {
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cards .card-title {
   font-size: 18px;
@@ -230,6 +385,17 @@ input[type=text] {
   margin-right: 15px;
   height: 21px;
   width: 22px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.cards .card i:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  font-weight: 600;
+  transform: scale(1.2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 footer {
@@ -255,7 +421,11 @@ footer nav {
   gap: 7px;
   font-weight: 400;
 }
-@media screen and (min-width: 376px) {
+footer nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 1025px) {
   footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
