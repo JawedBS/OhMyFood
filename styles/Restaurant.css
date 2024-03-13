@@ -115,7 +115,6 @@ main img {
   background: linear-gradient(#9356DC, #FF79DA);
   color: white;
   font-weight: 600;
-  transform: scale(1.2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
